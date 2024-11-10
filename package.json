@@ -7,13 +7,15 @@
     "start-server": "tsx ./index.ts",
     "lint": "eslint ./**/*.ts",
     "fix-lint": "eslint --fix ./**/*.ts",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.1.4",
     "koa": "^2.15.2",
     "koa-qs": "^3.0.0",
     "koa-zod-router": "^2.2.0",
@@ -27,6 +29,8 @@
     "@types/koa-qs": "~2.0.3",
     "eslint": "^8",
     "eslint-config-love": "^52",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
   }
 }
