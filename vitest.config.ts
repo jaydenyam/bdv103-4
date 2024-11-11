@@ -1,6 +1,6 @@
 // vitest.config.ts
 
-async function getConfig() {
+async function getConfig(): Promise<ReturnType<typeof defineConfig>> {
   const { defineConfig } = await import('vitest/config');
   return defineConfig({
     test: {

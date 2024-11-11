@@ -1,6 +1,11 @@
+// eslint.config.cjs
+
 module.exports = [
-    {
-      ...require('eslint-config-love'),
-      files: [ '**/*.js', '**/*.ts' ],
+  {
+    ...require('eslint-config-love'),
+    files: ['**/*.js', '**/*.ts'],
+    rules: {
+      '@typescript-eslint/explicit-function-return-type': 'off'
     }
-  ]
+  }
+];

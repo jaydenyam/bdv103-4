@@ -8,6 +8,8 @@
     "module": "node16",
     "target": "es2022",
     "types": ["vitest"],
+    "allowJs": true,
+    "checkJs":false,
 
     "strict": true,
     "esModuleInterop": true,
