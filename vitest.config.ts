@@ -1,10 +1,13 @@
 // vitest.config.ts
 
-async function getConfig(): Promise<ReturnType<typeof defineConfig>> {
+async function getConfig() {
   const { defineConfig } = await import('vitest/config');
   return defineConfig({
     test: {
-      include: ['*.test.js'],  // Matches all .test.js files in the main directory
+      includeSource: ['*.{js, ts}', '**/*.mts'],
+    },
+    define: {
+      'import.meta.vitest': 'undefined',
     },
   });
 }
