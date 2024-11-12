@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { type ZodRouter } from 'koa-zod-router'
-import { bookCollection } from '../database_access'
+import { getBookDatabase } from '../database_access'
 import { ObjectId } from 'mongodb'
 
 export default function createOrUpdateBook (router: ZodRouter): void {
@@ -19,6 +19,7 @@ export default function createOrUpdateBook (router: ZodRouter): void {
       })
     },
     handler: async (ctx, next) => {
+      const { books: bookCollection } = getBookDatabase()
       const body = ctx.request.body
 
       if (typeof body.id === 'string') {

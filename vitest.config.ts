@@ -1,15 +1,8 @@
-// vitest.config.ts
+import { defineConfig } from 'vitest/config'
 
-async function getConfig() {
-  const { defineConfig } = await import('vitest/config');
-  return defineConfig({
-    test: {
-      includeSource: ['*.{js, ts}', '**/*.mts'],
-    },
-    define: {
-      'import.meta.vitest': 'undefined',
-    },
-  });
-}
-
-export default getConfig();
+export default defineConfig({
+  test: {
+    includeSource: ['src/**/*.{js,ts}'],
+    setupFiles: ['./database_test_setup.ts']
+  }
+})

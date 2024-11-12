@@ -5,25 +5,17 @@
 
   "compilerOptions": {
     "lib": ["es2023"],
-    "module": "node16",
+    "module": "es2022",
     "target": "es2022",
-    "types": ["vitest", "vitest/importMeta"],
-    "allowJs": true,
-    "checkJs":false,
-    "outDir": "./dist",
-    "noEmit": true,
 
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-  },
-  "exclude": [
-    "node_modules",
-    "eslint.config.cjs",
-    "*.js"
-  ],
-  "include": ["**/*.ts", "**/*.tsx"]
+    "types": [
+      "vitest/importMeta"
+    ]
+  }
 }
